@@ -43,7 +43,6 @@ public class RubbishWorldMod implements ModInitializer {
 				ModBlocks.MODEL_LINGQING,RenderLayer.getTranslucent());
 
 		FabricDefaultAttributeRegistry.register(ModEntities.RUBBISH_MONSTER, Rubbish_MonsterEntity.createRubbish_MonsterAttributes());
-		Rubbish_MonsterEntity.r
 
 		ItemTooltipCallback.EVENT.register((stack, context, lines) -> {
 			String tooltipKey = ModItems.ITEM_TOOLTIPS.get(stack.getItem());
