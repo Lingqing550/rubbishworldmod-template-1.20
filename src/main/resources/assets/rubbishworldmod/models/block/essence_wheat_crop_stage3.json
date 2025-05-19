@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "rubbishworldmod:block/essence_wheat_crop_stage3"
+  }
+}

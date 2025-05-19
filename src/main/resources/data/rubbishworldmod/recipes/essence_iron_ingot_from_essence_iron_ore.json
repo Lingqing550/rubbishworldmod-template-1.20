@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "rubbishworldmod:essence_iron_ore"
+  },
+  "result": "rubbishworldmod:essence_iron_ingot_nugget"
+}

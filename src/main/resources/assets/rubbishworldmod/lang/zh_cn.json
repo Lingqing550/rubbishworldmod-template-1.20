@@ -1,0 +1,21 @@
+{
+  "item.rubbishworldmod.rubbish": "一袋垃圾",
+  "item.rubbishworldmod.electronic_trash": "电子垃圾",
+  "item.rubbishworldmod.kitchen_rubbish": "厨余垃圾",
+  "item.rubbishworldmod.rubbish_essence": "垃圾精华",
+  "item.rubbishworldmod.essence_iron_ore": "精华铁矿",
+  "item.rubbishworldmod.essence_iron_ingot": "精华铁锭",
+  "item.rubbishworldmod.essence_iron_ingot_nugget": "精华铁粒",
+  "item.rubbishworldmod.rubbish_crystal": "垃圾晶体",
+  "item.rubbishworldmod.essence_iron_ingot_up": "超级精华锭",
+  "item.rubbishworldmod.essence_iron_ingot_up_nugget": "超级精华粒",
+  "item.rubbishworldmod.rubbish_upgrade_smithing_template": "垃圾升级模板",
+  "item.rubbishworldmod.essence_bread": "精华面包",
+
+  "block.rubbishworldmod.rubbish_block": "垃圾块",
+  "block.rubbishworldmod.extracting_machine": "提取机",
+
+  "tooltip.rubbishworldmod.rubbish": "里面好像有什么东西",
+  "tooltip.rubbishworldmod.essence_bread": "闻起来和普通面包无异"
+
+}

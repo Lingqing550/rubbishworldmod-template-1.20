@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "@": {
+      "item": "rubbishworldmod:rubbish_block"
+    },
+    "&": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "@@@",
+    "@#@",
+    "@&@"
+  ],
+  "result": {
+    "item": "rubbishworldmod:rubbish_upgrade_smithing_template"
+  },
+  "show_notification": true
+}

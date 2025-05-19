@@ -1,0 +1,22 @@
+{
+  "item.rubbishworldmod.rubbish": "a Bag of rubbish",
+  "item.rubbishworldmod.electronic_trash": "electronic trash",
+  "item.rubbishworldmod.kitchen_rubbish": "kitchen rubbish",
+  "item.rubbishworldmod.rubbish_essence": "rubbish essence",
+  "item.rubbishworldmod.essence_iron_ore": "essence iron ore",
+  "item.rubbishworldmod.essence_iron_ingot": "essence iron ingot",
+  "item.rubbishworldmod.essence_iron_ingot_nugget": "essence iron ingot nugget",
+  "item.rubbishworldmod.rubbish_crystal": "rubbish crystal",
+  "item.rubbishworldmod.essence_iron_ingot_up": "super essence ingot",
+  "item.rubbishworldmod.essence_iron_ingot_up_nugget": "super essence ingot nugget",
+  "item.rubbishworldmod.rubbish_upgrade_smithing_template": "rubbish upgrade template",
+  "item.rubbishworldmod.essence_bread": "essence bread",
+
+
+  "block.rubbishworldmod.rubbish_block": "rubbish block",
+  "block.rubbishworldmod.extracting_machine": "extracting machine",
+
+  "tooltip.rubbishworldmod.rubbish": "It seems that there is something inside",
+  "tooltip.rubbishworldmod.essence_bread": "It smells no different from ordinary bread"
+
+}

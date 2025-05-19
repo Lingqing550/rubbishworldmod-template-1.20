@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "rubbishworldmod:essence_iron_ingot_up_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "rubbishworldmod:essence_iron_ingot_up"
+  },
+  "show_notification": true
+}

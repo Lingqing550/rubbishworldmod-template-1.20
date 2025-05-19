@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item":"rubbishworldmod:rubbish_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "rubbishworldmod:essence_iron_ingot"
+
+  },
+  "addition": {
+    "item": "rubbishworldmod:rubbish_crystal"
+  },
+  "result": {
+    "item": "rubbishworldmod:essence_iron_ingot_up"
+  }
+}
