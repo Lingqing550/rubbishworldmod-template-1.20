@@ -47,7 +47,7 @@ public class RubbishWorldMod implements ModInitializer {
 		ItemTooltipCallback.EVENT.register((stack, context, lines) -> {
 			String tooltipKey = ModItems.ITEM_TOOLTIPS.get(stack.getItem());
 			if (tooltipKey != null) {
-				lines.add(Text.translatable(tooltipKey).formatted(Formatting.GRAY));
+				lines.add(Text.translatable(tooltipKey).formatted(Formatting.WHITE));
 			}
 		});
 

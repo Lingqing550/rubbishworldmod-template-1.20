@@ -1,3 +1,7 @@
+// Made with Blockbench 4.12.4
+// Exported for Minecraft version 1.17+ for Yarn
+// Paste this class into your mod and generate all required imports
+
 package com.lingqing.rubbishworldmod.entity.client;
 
 import com.lingqing.rubbishworldmod.entity.custom.Rubbish_MonsterEntity;
@@ -6,42 +10,75 @@ import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 
-// Made with Blockbench 4.12.4
-// Exported for Minecraft version 1.17+ for Yarn
-// Paste this class into your mod and generate all required imports
 public class Rubbish_MonsterModel<T extends Rubbish_MonsterEntity>extends SinglePartEntityModel<T> {
 	private final ModelPart rubbish_monster;
-	private final ModelPart left_front_leg;
-	private final ModelPart right_front_leg;
-	private final ModelPart left_back_leg;
-	private final ModelPart right_back_leg;
-	private final ModelPart head;
+	private final ModelPart leg;
+	private final ModelPart left;
+	private final ModelPart right;
+	private final ModelPart up;
 	private final ModelPart body;
+	private final ModelPart bottom;
+	private final ModelPart senter;
+	private final ModelPart top;
+	private final ModelPart head;
+	private final ModelPart arm;
+	private final ModelPart left2;
+	private final ModelPart right2;
 	public Rubbish_MonsterModel(ModelPart root) {
 		this.rubbish_monster = root.getChild("rubbish_monster");
-		this.left_front_leg = this.rubbish_monster.getChild("left_front_leg");
-		this.right_front_leg = this.rubbish_monster.getChild("right_front_leg");
-		this.left_back_leg = this.rubbish_monster.getChild("left_back_leg");
-		this.right_back_leg = this.rubbish_monster.getChild("right_back_leg");
-		this.head = this.rubbish_monster.getChild("head");
-		this.body = this.rubbish_monster.getChild("body");
+		this.leg = root.getChild("leg");
+		this.left = root.getChild("left");
+		this.right = root.getChild("right");
+		this.up = root.getChild("up");
+		this.body = root.getChild("body");
+		this.bottom = root.getChild("bottom");
+		this.senter = root.getChild("senter");
+		this.top = root.getChild("top");
+		this.head = root.getChild("head");
+		this.arm = root.getChild("arm");
+		this.left2 = root.getChild("left2");
+		this.right2 = root.getChild("right2");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
 		ModelPartData rubbish_monster = modelPartData.addChild("rubbish_monster", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 
-		ModelPartData left_front_leg = rubbish_monster.addChild("left_front_leg", ModelPartBuilder.create().uv(0, 0).cuboid(1.0F, -3.0F, -4.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		ModelPartData leg = rubbish_monster.addChild("leg", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -3.0F, 0.0F));
 
-		ModelPartData right_front_leg = rubbish_monster.addChild("right_front_leg", ModelPartBuilder.create().uv(0, 0).cuboid(-3.0F, -3.0F, -4.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		ModelPartData left = leg.addChild("left", ModelPartBuilder.create().uv(30, 0).cuboid(1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
-		ModelPartData left_back_leg = rubbish_monster.addChild("left_back_leg", ModelPartBuilder.create().uv(0, 0).cuboid(1.0F, -3.0F, 3.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		ModelPartData right = leg.addChild("right", ModelPartBuilder.create().uv(20, 31).cuboid(-3.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
-		ModelPartData right_back_leg = rubbish_monster.addChild("right_back_leg", ModelPartBuilder.create().uv(0, 0).cuboid(-3.0F, -3.0F, 3.0F, 2.0F, 3.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		ModelPartData up = rubbish_monster.addChild("up", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -3.0F, 0.0F));
 
-		ModelPartData head = rubbish_monster.addChild("head", ModelPartBuilder.create().uv(-3, -2).cuboid(-2.0F, -11.0F, -7.0F, 4.0F, 4.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		ModelPartData body = up.addChild("body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 1.0F));
 
-		ModelPartData body = rubbish_monster.addChild("body", ModelPartBuilder.create().uv(-9, -7).cuboid(-3.0F, -7.0F, -4.0F, 6.0F, 4.0F, 9.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		ModelPartData bottom = body.addChild("bottom", ModelPartBuilder.create().uv(0, 19).cuboid(0.0F, -4.0F, -4.0F, 4.0F, 1.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(-2.0F, 3.0F, 1.0F));
+
+		ModelPartData senter = body.addChild("senter", ModelPartBuilder.create().uv(0, 27).cuboid(0.0F, -9.0F, 0.0F, 4.0F, 5.0F, 1.0F, new Dilation(0.0F))
+		.uv(10, 28).cuboid(0.0F, -9.0F, -5.0F, 4.0F, 5.0F, 1.0F, new Dilation(0.0F))
+		.uv(16, 19).cuboid(4.0F, -9.0F, -4.0F, 1.0F, 5.0F, 4.0F, new Dilation(0.0F))
+		.uv(20, 0).cuboid(-1.0F, -9.0F, -4.0F, 1.0F, 5.0F, 4.0F, new Dilation(0.0F)), ModelTransform.pivot(-2.0F, 3.0F, 1.0F));
+
+		ModelPartData top = up.addChild("top", ModelPartBuilder.create().uv(20, 9).cuboid(-3.0F, -3.0F, 2.0F, 6.0F, 1.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 24).cuboid(-3.0F, -3.0F, -4.0F, 6.0F, 1.0F, 2.0F, new Dilation(0.0F))
+		.uv(0, 12).cuboid(-4.0F, -3.0F, -3.0F, 2.0F, 1.0F, 6.0F, new Dilation(0.0F))
+		.uv(16, 12).cuboid(2.0F, -3.0F, -3.0F, 2.0F, 1.0F, 6.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -4.0F, 0.0F));
+
+		ModelPartData head = up.addChild("head", ModelPartBuilder.create().uv(0, 0).cuboid(-2.0F, -1.0F, -6.0F, 4.0F, 1.0F, 6.0F, new Dilation(0.0F))
+		.uv(0, 7).cuboid(-3.0F, -1.0F, -5.0F, 6.0F, 1.0F, 4.0F, new Dilation(0.0F))
+		.uv(30, 5).cuboid(-1.0F, -2.0F, -4.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -7.0F, 3.0F));
+
+		ModelPartData arm = up.addChild("arm", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -4.0F, 0.0F));
+
+		ModelPartData left2 = arm.addChild("left2", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+
+		ModelPartData cube_r1 = left2.addChild("cube_r1", ModelPartBuilder.create().uv(26, 19).cuboid(-1.0F, -1.0F, -5.0F, 1.0F, 1.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(4.0F, 0.0F, 0.0F, 0.4363F, 0.0F, 0.0F));
+
+		ModelPartData right2 = arm.addChild("right2", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+
+		ModelPartData cube_r2 = right2.addChild("cube_r2", ModelPartBuilder.create().uv(26, 25).cuboid(-1.0F, -1.0F, -5.0F, 1.0F, 1.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(-3.0F, 0.0F, 0.0F, 0.4363F, 0.0F, 0.0F));
 		return TexturedModelData.of(modelData, 64, 64);
 	}
 	@Override
