@@ -4,6 +4,7 @@
 
 package com.lingqing.rubbishworldmod.entity.client;
 
+import com.lingqing.rubbishworldmod.entity.animation.Rubbish_MonsterAnimation;
 import com.lingqing.rubbishworldmod.entity.custom.Rubbish_MonsterEntity;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -12,32 +13,8 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class Rubbish_MonsterModel<T extends Rubbish_MonsterEntity>extends SinglePartEntityModel<T> {
 	private final ModelPart rubbish_monster;
-	private final ModelPart leg;
-	private final ModelPart left;
-	private final ModelPart right;
-	private final ModelPart up;
-	private final ModelPart body;
-	private final ModelPart bottom;
-	private final ModelPart senter;
-	private final ModelPart top;
-	private final ModelPart head;
-	private final ModelPart arm;
-	private final ModelPart left2;
-	private final ModelPart right2;
 	public Rubbish_MonsterModel(ModelPart root) {
 		this.rubbish_monster = root.getChild("rubbish_monster");
-		this.leg = root.getChild("leg");
-		this.left = root.getChild("left");
-		this.right = root.getChild("right");
-		this.up = root.getChild("up");
-		this.body = root.getChild("body");
-		this.bottom = root.getChild("bottom");
-		this.senter = root.getChild("senter");
-		this.top = root.getChild("top");
-		this.head = root.getChild("head");
-		this.arm = root.getChild("arm");
-		this.left2 = root.getChild("left2");
-		this.right2 = root.getChild("right2");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
@@ -83,6 +60,10 @@ public class Rubbish_MonsterModel<T extends Rubbish_MonsterEntity>extends Single
 	}
 	@Override
 	public void setAngles(Rubbish_MonsterEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.getPart().traverse().forEach(ModelPart::resetTransform);
+		this.animateMovement(Rubbish_MonsterAnimation.WALK,limbSwing,limbSwingAmount,2f,2.5f);
+		this.updateAnimation(entity.idleAnimationState,Rubbish_MonsterAnimation.STANDBY,ageInTicks,1f);
+		this.updateAnimation(entity.attackAnimationState,Rubbish_MonsterAnimation.ATTACK,ageInTicks,1f);
 	}
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {

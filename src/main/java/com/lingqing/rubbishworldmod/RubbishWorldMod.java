@@ -44,6 +44,10 @@ public class RubbishWorldMod implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.RUBBISH_MONSTER, Rubbish_MonsterEntity.createRubbish_MonsterAttributes());
 
+
+
+
+
 		ItemTooltipCallback.EVENT.register((stack, context, lines) -> {
 			String tooltipKey = ModItems.ITEM_TOOLTIPS.get(stack.getItem());
 			if (tooltipKey != null) {

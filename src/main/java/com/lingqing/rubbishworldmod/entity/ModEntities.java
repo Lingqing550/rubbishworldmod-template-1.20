@@ -13,6 +13,8 @@ import net.minecraft.util.Identifier;
 public class ModEntities {
     public static final EntityType<Rubbish_MonsterEntity> RUBBISH_MONSTER = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(RubbishWorldMod.MOD_ID,"rubbish_monster"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE,Rubbish_MonsterEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f,1f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER,Rubbish_MonsterEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.6f,0.6f))
+                    .trackRangeBlocks(5)
+                    .build());
 }
